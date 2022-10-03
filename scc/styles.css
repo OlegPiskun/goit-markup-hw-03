@@ -30,15 +30,36 @@ body {
   background-color: var(--primary-white-color);
 }
 
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  outline: 2px dashed #f44336;
+}
+
 /* Логотип студії */
+
+.header-page {
+  display: flex;
+  align-items: center;
+}
 
 .logo {
   font-family: Raleway;
-  /* font-style: normal; */
   font-weight: var(--primary-font-weight);
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03;
+}
+
+.logo-page {
+  display: flex;
+  align-items: center;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
 }
 
 .color-web,
@@ -50,11 +71,35 @@ body {
   color: #000000;
 }
 
+.nav .list {
+  display: flex;
+  margin-left: 93px;
+}
+
+.nav .list .item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.item .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
 .list .link {
   font-weight: var(--second-font-weight);
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: #212121;
+}
+
+.contacts {
+  display: flex;
+  margin-left: 344px;
+}
+
+.contacts .item + .item {
+  margin-left: 50px;
 }
 
 .contacts .link {
@@ -79,6 +124,9 @@ body {
 }
 
 .hero-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  padding-top: 213px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -89,6 +137,11 @@ body {
 /* Кнопка головної */
 
 .hero-button {
+  display: inline-block;
+  margin-bottom: 200px;
+  padding: 10px 32px;
+  border-radius: 4px;
+  border: 0 solid transparent;
   background-color: var(--accent-color);
   color: var(--primary-white-color);
   font-family: inherit;
@@ -124,7 +177,22 @@ body {
 
 /* Заголовки секцій */
 
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
 .section-title {
+  margin-top: 0;
+  margin-bottom: 50px;
   font-weight: var(--primary-font-weight);
   font-size: 36px;
   line-height: 1.17;
@@ -151,6 +219,9 @@ body {
 /* Наші переваги */
 
 .benefits-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-top: 94px;
   font-weight: var(--primary-font-weight);
   font-size: 14px;
   line-height: 1.14;
@@ -159,19 +230,29 @@ body {
 }
 
 .benefits-text {
-  /* font-size: 14px; */
+  margin: 0;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: #757575;
 }
 
+/* Чим ми займаємося */
+
+.activity {
+  padding-top: 94px;
+}
+
 /* Наша команда */
 
 .team {
+  padding-top: 94px;
+  padding-bottom: 94px;
   background-color: #f5f4fa;
 }
 
 .team-name {
+  margin-top: 0;
+  margin-bottom: 10px;
   font-weight: var(--second-font-weight);
   font-size: 16px;
   line-height: 1.19;
@@ -179,6 +260,9 @@ body {
 }
 
 .team-profession {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 30px;
   color: #757575;
   line-height: 1.19;
   letter-spacing: 0.03;
@@ -194,7 +278,13 @@ body {
 /* Підвал сторінки */
 
 .footer-list {
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: #2f303a;
+}
+
+.footer {
+  display: block;
 }
 
 .footer-list .color-studio,
@@ -203,6 +293,7 @@ body {
 }
 
 .address-list .address {
+  margin-top: 80px;
   font-weight: normal;
   font-style: normal;
   line-height: 1.71;
