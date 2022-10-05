@@ -33,6 +33,7 @@ body {
 
 .header-list {
   background-color: var(--primary-white-color);
+  border-bottom: 1px solid #ececec;
 }
 
 .container {
@@ -41,8 +42,6 @@ body {
   width: 1230px;
   padding-left: 15px;
   padding-right: 15px;
-
-  outline: 2px dashed #f44336;
 }
 
 /* Логотип студії */
@@ -66,7 +65,7 @@ body {
 }
 
 .color-web,
-.active {
+.item .active {
   color: var(--accent-color);
 }
 
@@ -96,6 +95,8 @@ body {
   color: #212121;
 }
 
+/* Контакти */
+
 .contacts {
   display: flex;
   margin-left: auto;
@@ -103,6 +104,10 @@ body {
 
 .contacts .item + .item {
   margin-left: 50px;
+}
+
+.list .item .current {
+  color: var(--accent-color);
 }
 
 .contacts .link {
@@ -124,6 +129,14 @@ body {
   background-color: #2f303a;
   letter-spacing: 0.06em;
   text-align: center;
+}
+
+/* Герой портфоліо */
+
+.hero-portfolio {
+  background-color: var(--primary-white-color);
+  padding-bottom: 94px;
+  padding-top: 94px;
 }
 
 .hero-title {
@@ -162,9 +175,22 @@ body {
 
 /* Кнопки портфоліо */
 
-.button {
+.buttons-page {
+  display: flex;
+  justify-content: center;
+}
+
+.buttons-page .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.button-portfolio {
   background-color: #f5f4fa;
   font-weight: var(--second-font-weight);
+  padding: 6px 22px;
+  border-radius: 4px;
+  border: 0 solid transparent;
+  margin-bottom: 56px;
   font-size: 16px;
   line-height: 1.63;
   letter-spacing: 0.03em;
@@ -173,9 +199,14 @@ body {
   cursor: pointer;
 }
 
-.button:hover,
-.button:focus {
-  color: #212121;
+.button-portfolio .item:first-child {
+  padding: 6px 25px;
+}
+
+.button-portfolio:hover,
+.button-portfolio:focus {
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
 }
 
 /* Приховати заголовок "Наші переваги" */
@@ -206,7 +237,30 @@ body {
 
 /* Список проєктів портофоліо */
 
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.projects .item {
+  width: 370px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  border: 1px solid #eeeeee;
+}
+
+.projects .item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.projects .item:nth-child(- n + 3) {
+  margin-bottom: 0;
+}
+
 .projects-title {
+  margin-top: 20px;
+  margin-bottom: 0;
+  margin-left: 24px;
   font-weight: var(--primary-font-weight);
   font-size: 18px;
   line-height: 2;
@@ -214,6 +268,9 @@ body {
 }
 
 .projects-text {
+  margin-left: 24px;
+  margin-top: 4px;
+  margin-bottom: 20px;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
@@ -360,8 +417,3 @@ body {
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
-
-/* .address .item {
-  padding-top: 0;
-  padding-left: 0;
-} */
