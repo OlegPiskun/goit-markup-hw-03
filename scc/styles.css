@@ -23,7 +23,6 @@
 }
 
 body {
-  background-color: #f5f5f5;
   font-size: 14px;
   color: #212121;
   font-family: Roboto, sans-serif;
@@ -155,8 +154,6 @@ body {
 /* Кнопка головної */
 
 .hero-button {
-  display: inline-block;
-  margin-bottom: 200px;
   padding: 10px 32px;
   border-radius: 4px;
   border: 0 solid transparent;
@@ -180,9 +177,6 @@ body {
 .buttons-page {
   display: flex;
   justify-content: center;
-}
-
-.buttons-page .item {
   margin-bottom: 50px;
 }
 
@@ -294,7 +288,6 @@ body {
 
 .benefits-set {
   display: flex;
-  align-items: flex-start;
 }
 
 .benefits-set .item {
@@ -308,7 +301,6 @@ body {
 .benefits-title {
   margin-top: 0;
   margin-bottom: 10px;
-
   font-weight: var(--primary-font-weight);
   font-size: 14px;
   line-height: 1.14;
@@ -357,7 +349,11 @@ body {
 }
 
 .team-set .item {
+  background-color: #ffffff;
   width: 270px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team-set .item:not(:last-child) {
@@ -370,6 +366,7 @@ body {
 }
 
 .team-name {
+  margin-top: 0;
   margin-bottom: 10px;
   font-weight: var(--second-font-weight);
   font-size: 16px;
@@ -442,7 +439,6 @@ body {
 .footer-list .link-rgba {
   padding-top: 0;
   padding-bottom: 0;
-
   font-style: normal;
   line-height: 1.71;
   letter-spacing: 0.03em;
